@@ -1,0 +1,24 @@
+Sub changAnswerColor()
+Word.Application.ScreenUpdating = False
+
+Dim oRng As Range
+Dim oRng1 As Range
+Dim oRng2 As Range
+Dim oDoc As Document
+Dim sText As String
+Set oDoc = Word.ActiveDocument
+oDoc.Content.InsertParagraphAfter
+
+iLine = oDoc.BuiltInDocumentProperties(wdPropertyLines)
+
+For i = iLine To 1 Step -1
+    Set oRng1 = oDoc.GoTo(wdGoToLine, which:=wdGoToAbsolute, Count:=i)
+    Set oRng2 = oDoc.GoTo(wdGoToLine, which:=wdGoToAbsolute, Count:=i + 1)
+    Set oRng = oDoc.Range(oRng1.Start, oRng2.Start)
+    sText = oRng.Text
+    If sText Like "*Ans:*" Then
+        oRng.Font.ColorIndex = wdWhite
+    End If
+Next
+
+End Sub
