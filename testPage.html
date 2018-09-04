@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>test Page</title>
+<style type="text/css">
+table.tbl1{
+  table-layout: fixed; 
+  width: 100%;
+  border-collapse: collapse;
+  border: solid 2px orange;
+}
+table.tbl1 td {
+  border: solid 1px orange;
+  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+table.tbl2{
+  table-layout: fixed; 
+  width: 100%;
+  border-collapse: collapse;
+  border: solid 2px green;
+}
+table.tbl2 td {
+  border: solid 1px green;
+  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+</style>
+</head>
+<body>
+<table class="tbl1">
+<tr>
+	<td>1asdfasdfahdfjo8w47g7hsgs7ehgph8g8php8ehrpgfk</td>
+	<td>2asdfasdfahdfjfkqf3p8989h4fp98fh84h9</td>
+	<td></td>
+	<td></td>
+</tr>
+</table>
+</br>
+<table class="tbl2">
+<tr>
+	<td>1asdfasdfa984jg8w4jg;hv98es8vphdfjo8w47g7fw893hoehspgvwapvucbvjkbcbsbvlzuzhsgs7ehgph8g8php8ehrpgfk</td>
+	<td>2asdfasdfahdfjfkqf3p8989h4fp98fj389j9j8fjfh84h9</td>
+	<td></td>
+	<td></td>
+</tr>
+</table>
+
+</body>
+</html>
